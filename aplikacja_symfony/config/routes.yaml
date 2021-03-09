@@ -1,0 +1,3 @@
+# index:
+#    path: /number
+#    controller: App\Controller\Start::number
