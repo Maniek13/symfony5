@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -94,7 +93,6 @@ class UserController extends AbstractController
                 'No user found'
             );
         }
-        
 
         return new Response(json_encode($user));
     }
@@ -132,7 +130,6 @@ class UserController extends AbstractController
             $entityManager->persist($check);
             $entityManager->flush();
         }
-
 
         return $this->render('check/check.html.twig', [
             'form' => $form->createView(), 

@@ -1,23 +1,20 @@
 <?php
+
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
-   
+
 class Start extends AbstractController
 {
-     /**
-     * @Route("/number", name="number")
+    /**
+     * @Route("/", name="start")
      */
-    public function number(): Response
+    public function index(Request $request): Response
     {
-        $number = random_int(0, 100);
-
-        return $this->render('start.html.twig', [
-            'number' => $number, 
-            ]);
+        return $this->render('start.html.twig');
     }
-    
 }
