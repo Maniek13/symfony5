@@ -16,7 +16,7 @@ use Symfony\Component\PropertyAccess\PropertyAccess;
 class UserController extends AbstractController
 {
     /**
-     * @Route("/user_add/{name}", name="user")
+     * @Route("/user_add/{name}", name="add_user")
      */
     public function createUser(string $name): Response
     {
@@ -35,7 +35,7 @@ class UserController extends AbstractController
 
     
     /**
-     * @Route("/user_show/{id}", name="user")
+     * @Route("/user_show/{id}", name="show_user")
      */
     public function showUser(int $id): Response
     {
@@ -99,7 +99,7 @@ class UserController extends AbstractController
 
 
           /**
-     * @Route("/form", name="users")
+     * @Route("/form", name="add_user_form")
      */
     public function new(Request $request): Response
     {
